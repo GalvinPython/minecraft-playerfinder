@@ -29,6 +29,10 @@ Also: This mod requires the **Fabric API** and Fabric Loader **0.16.0 or higher 
 PS: *You cannot use this mod on servers that don't use this mod. The commands are created server-side*
 
 # Changelog
+## 1.0.4 (1.22.11)
+* For 1.22.11 compatibility
+* Updated dependencies
+
 ## 1.0.3 (1.22.10)
 * For 1.22.10 compatibility
 * Updated dependencies
