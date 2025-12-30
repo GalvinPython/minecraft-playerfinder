@@ -33,8 +33,8 @@ PS: *You cannot use this mod on servers that don't use this mod. The commands ar
 * For 1.21.11 compatibility
 * Updated dependencies
 
-## 1.0.3 (1.22.10)
-* For 1.22.10 compatibility
+## 1.0.3 (1.21.10)
+* For 1.21.10 compatibility
 * Updated dependencies
 
 ## 1.0.2 (1.21.9)
