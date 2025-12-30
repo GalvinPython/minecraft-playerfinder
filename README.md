@@ -13,10 +13,13 @@ Use the `/findplayer` command and enter the player's name. There is also a dropd
 ![Usage](https://raw.githubusercontent.com/GalvinPython/minecraft-playerfinder/main/.github/assets/javaw_QXmxvWN79i.png)
 
 # Compatible Versions
-| Mod Version | Game Version(s) | Mod Version Title |
-|-------------|-----------------|-------------------|
-| 1.0.1       | 1.21 - 1.21.1   | 1.0.1+1.21        |
-| 1.0.0       | 1.21 - 1.21.1   | 1.0.0+1.21        |
+[![Supported versions](https://modrinth-shields.imgalvin.me/badge/playerfinder)](https://modrinth.com/mod/playerfinder)
+
+AutoTorcher is available for Minecraft versions 1.20 and above!
+
+Due to the frequency of Minecraft updates now, each Minecraft version has its own .jar file from 1.21.9 and above. This is mainly to prevent crashes from each drop.
+
+Please also keep your loader and Fabric API up to date to ensure the best compatibility!
 
 # Important Note
 This mod is a **server-side** mod! You are **not** required to install this mod on the client-side, unless you are using the "Open to LAN" feature to create a server on your world.
@@ -26,6 +29,10 @@ Also: This mod requires the **Fabric API** and Fabric Loader **0.16.0 or higher 
 PS: *You cannot use this mod on servers that don't use this mod. The commands are created server-side*
 
 # Changelog
+## 1.0.2 (1.21.9)
+* For 1.21.9 compatibility
+* Updated dependencies (this is really important!)
+
 ## 1.0.1
 * Added colours to the co-ordinates depending on the dimension
 * Updated dimensions to remove "the" in the name
