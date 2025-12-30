@@ -30,8 +30,8 @@ public class PlayerFinder implements ModInitializer {
 
 								BlockPos targetBlockPos = targetPlayer.getBlockPos();
 								BlockPos sourceBlockPos = sourcePlayer.getBlockPos();
-								RegistryKey<World> playerDimension = targetPlayer.getWorld().getRegistryKey();
-								RegistryKey<World> sourceDimension = sourcePlayer.getWorld().getRegistryKey();
+								RegistryKey<World> playerDimension = targetPlayer.getEntityWorld().getRegistryKey();
+								RegistryKey<World> sourceDimension = sourcePlayer.getEntityWorld().getRegistryKey();
 
 								boolean isSameDimension = sourceDimension == playerDimension;
 
