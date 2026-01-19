@@ -1,17 +1,17 @@
 package me.imgalvin.playerfinder;
 
+import net.minecraft.ChatFormatting;
 import net.minecraft.registry.RegistryKey;
-import net.minecraft.util.Formatting;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.NotNull;
 
 public class PlayerFinderUtils {
-    public Formatting getDimensionColor(@NotNull RegistryKey<World> playerDimension) {
-        return playerDimension.equals(World.OVERWORLD) ? Formatting.GREEN :
-                playerDimension.equals(World.NETHER) ? Formatting.RED :
-                        playerDimension.equals(World.END) ? Formatting.LIGHT_PURPLE :
-                                Formatting.GRAY; // Fallback color for custom or unknown dimensions
+    public ChatFormatting getDimensionColor(@NotNull RegistryKey<World> playerDimension) {
+        return playerDimension.equals(World.OVERWORLD) ? ChatFormatting.GREEN :
+                playerDimension.equals(World.NETHER) ? ChatFormatting.RED :
+                        playerDimension.equals(World.END) ? ChatFormatting.LIGHT_PURPLE :
+                                ChatFormatting.GRAY; // Fallback colour for custom or unknown dimensions
     }
 
     public String getDimensionText(@NotNull RegistryKey<World> playerDimension) {
