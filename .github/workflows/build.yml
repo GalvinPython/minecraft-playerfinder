@@ -6,15 +6,6 @@
 name: build
 on:
   pull_request:
-    paths:
-      - '.github/workflows/build.yml'
-      - 'build.gradle'
-      - 'gradle.properties'
-      - 'gradle/**'
-      - 'gradlew'
-      - 'gradlew.bat'
-      - 'settings.gradle'
-      - 'src/**'
   push:
     paths:
       - '.github/workflows/build.yml'
