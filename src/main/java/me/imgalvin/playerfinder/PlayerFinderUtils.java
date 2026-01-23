@@ -16,11 +16,11 @@ public class PlayerFinderUtils {
     }
 
     public String getDimensionText(@NotNull ResourceKey<Level> playerDimension) {
-        // note: this function only works for vanilla dimensions. custom dimensions will have a slight issue
-        return playerDimension.toString().split(":")[1].replace("the_", "");
+        return playerDimension.identifier().getPath().replace("the_", "");
     }
 
     public int getDistance(@NotNull BlockPos playerPos, @NotNull BlockPos targetPos) {
+        System.out.println("Calculating distance between " + playerPos + " and " + targetPos);
         return (int) Math.sqrt(Math.pow(playerPos.getX() - targetPos.getX(), 2) + Math.pow(playerPos.getY() - targetPos.getY(), 2) + Math.pow(playerPos.getZ() - targetPos.getZ(), 2));
     }
 }
