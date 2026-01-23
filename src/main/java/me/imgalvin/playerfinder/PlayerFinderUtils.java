@@ -1,22 +1,23 @@
 package me.imgalvin.playerfinder;
 
 import net.minecraft.ChatFormatting;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
+import net.minecraft.core.BlockPos;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 
 public class PlayerFinderUtils {
-    public ChatFormatting getDimensionColor(@NotNull RegistryKey<World> playerDimension) {
-        return playerDimension.equals(World.OVERWORLD) ? ChatFormatting.GREEN :
-                playerDimension.equals(World.NETHER) ? ChatFormatting.RED :
-                        playerDimension.equals(World.END) ? ChatFormatting.LIGHT_PURPLE :
+    public ChatFormatting getDimensionColor(@NotNull ResourceKey<Level> playerDimension) {
+        return playerDimension.equals(ServerLevel.OVERWORLD) ? ChatFormatting.GREEN :
+                playerDimension.equals(ServerLevel.NETHER) ? ChatFormatting.RED :
+                        playerDimension.equals(ServerLevel.END) ? ChatFormatting.LIGHT_PURPLE :
                                 ChatFormatting.GRAY; // Fallback colour for custom or unknown dimensions
     }
 
-    public String getDimensionText(@NotNull RegistryKey<World> playerDimension) {
+    public String getDimensionText(@NotNull ResourceKey<Level> playerDimension) {
         // note: this function only works for vanilla dimensions. custom dimensions will have a slight issue
-        return playerDimension.getValue().toString().split(":")[1].replace("the_", "");
+        return playerDimension.toString().split(":")[1].replace("the_", "");
     }
 
     public int getDistance(@NotNull BlockPos playerPos, @NotNull BlockPos targetPos) {
